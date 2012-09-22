@@ -56,8 +56,8 @@ if (!defined('IN_CMS')) { exit(); }
       <tr>
         <td><a href="<?php echo get_url('plugin/secure_upload/download/'.$row['filename']); ?>"><?php echo $row['filename']; ?></a></td>
         <td><code><?php echo $row['filesize']; ?></code></td>
-        <td><a href="<?php echo get_url('plugin/secure_upload/preview/'. $row['filename']); ?>"><img src="<?php echo ICONS_URI;?>delete-16.png" alt="<?php echo __('delete file icon'); ?>" title="<?php echo __('Preview file'); ?>" /></a></td>
-        <td><a href="<?php echo get_url('plugin/secure_upload/delete/'. $row['filename']); ?>" onclick="return confirm('<?php echo __('Are you sure you wish to delete?'); ?> <?php echo $row['filename']; ?>?');"><img src="<?php echo ICONS_URI;?>delete-16.png" alt="<?php echo __('delete file icon'); ?>" title="<?php echo __('Delete file'); ?>" /></a></td>
+        <td><a href="<?php echo get_url('plugin/secure_upload/preview/'. $row['filename']); ?>"><img src="<?php echo ICONS_URI;?>delete-16.png" alt="<?php echo __('delete file icon'); ?>" title="<?php echo __('Preview file'); ?>" /></a>
+        <a href="<?php echo get_url('plugin/secure_upload/delete/'. $row['filename']); ?>" onclick="return confirm('<?php echo __('Are you sure you wish to delete?'); ?> <?php echo $row['filename']; ?>?');"><img src="<?php echo ICONS_URI;?>delete-16.png" alt="<?php echo __('delete file icon'); ?>" title="<?php echo __('Delete file'); ?>" /></a></td>
       </tr>
 <?php
     }

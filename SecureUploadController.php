@@ -49,7 +49,7 @@ class SecureUploadController extends PluginController {
     }
 
     public function upload() {
-        require_once('/var/www/melchercms/config.php');
+        require_once(CMS_ROOT . DS . 'config.php');
 
         $db = mysql_connect('localhost', DB_USER, DB_PASS);
         if($db) {
@@ -94,7 +94,7 @@ class SecureUploadController extends PluginController {
       $file = func_get_args();
       $name = array_pop($file);
 
-      require_once('/var/www/melchercms/config.php');
+      require_once(CMS_ROOT . DS . 'config.php');
 
       $db = mysql_connect('localhost', DB_USER, DB_PASS);
       if($db) {
@@ -113,8 +113,8 @@ class SecureUploadController extends PluginController {
       $file = func_get_args();
       $name = array_pop($file);
 
-      require_once('/var/www/melchercms/config.php');
-    
+      require_once(CMS_ROOT . DS . 'config.php');
+
       $db = mysql_connect('localhost', DB_USER, DB_PASS);
       if($db) {
         mysql_select_db('binary_files', $db);
@@ -130,8 +130,8 @@ class SecureUploadController extends PluginController {
       $file = func_get_args();
       $name = array_pop($file);
       
-      require_once('/var/www/melchercms/config.php');
-      
+      require_once(CMS_ROOT . DS . 'config.php');
+
       $db = mysql_connect('localhost', DB_USER, DB_PASS);
       if($db) {
         mysql_select_db('binary_files', $db);
